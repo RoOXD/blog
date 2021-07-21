@@ -20,7 +20,7 @@ if (decodeUserID($value)){
 	$total_rows = pg_fetch_array($total_pages_sql)[0];
 	$total_pages = ceil($total_rows / $no_of_records_per_page);
 
-	$result = pg_query($dbconn, "SELECT title,body,created_at FROM posts ORDER BY created_at DESC LIMIT $no_of_records_per_page OFFSET $offset");
+	$result = pg_query_params($dbconn, 'SELECT title,body,created_at FROM posts ORDER BY created_at DESC LIMIT $1 OFFSET $2',array($no_of_records_per_page,$offset));
 		echo '<table border="3" style="width: 100%;">';
 		while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     		echo "\t<tr>\n";
