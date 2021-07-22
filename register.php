@@ -1,19 +1,17 @@
 <?php
 
-if(isset($_POST['submit'])) {
-$dbconn = pg_connect("host=localhost port=5432 dbname=blog user=postgres");
+if (isset($_POST['submit'])) {
+    $dbconn = pg_connect("host=localhost port=5432 dbname=blog user=postgres");
 
-$username = htmlspecialchars($_POST['username'],ENT_QUOTES);
-$password = password_hash($_POST['password'],PASSWORD_BCRYPT);
+    $username = htmlspecialchars($_POST['username'], ENT_QUOTES);
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-$query = pg_query_params($dbconn, 'INSERT INTO users (username, password) VALUES ($1,$2)', array($username,$password));
-if ( $query ) {
-
-	echo  "Inregistrare efectuata cu succes";
-}else{
-	
-	echo "Nume de utilizator luat!";
-      }
+    $query = pg_query_params($dbconn, 'INSERT INTO users (username, password) VALUES ($1,$2)', array($username,$password));
+    if ($query) {
+        echo  "Inregistrare efectuata cu succes";
+    } else {
+        echo "Nume de utilizator luat!";
+    }
 }
 ?>
 <html>
