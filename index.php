@@ -1,3 +1,6 @@
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</html>
 <?php
     require 'auth.php';
 
@@ -19,7 +22,7 @@
     $total_pages = ceil($total_rows / $no_of_records_per_page);
 
     $result = pg_query_params($dbconn, 'SELECT id,title,body,created_at FROM posts ORDER BY created_at DESC LIMIT $1 OFFSET $2', array($no_of_records_per_page,$offset));
-    echo '<table border="3" style="width: 100%;">';
+    echo '<table border="3">';
     while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
         echo "\t<tr>\n";
         $k=1;
