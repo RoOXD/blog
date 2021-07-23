@@ -10,11 +10,24 @@ if (isset($_COOKIE["UserCookie"])&&!empty($_COOKIE["UserCookie"])) {
     ?>
 <html>
 <body>
-<p>Pagina Login</p>
+
+
+<body>
+<div class="container">
+<div class="blog-header">
+<h1 class="blog-title">Pagina Login</h1>
+</div>
+</div>
+
 <form action="login.php" method="post">
-Numele utilizatorului: <input type="text" name="username" required><br>
-Parola: <input type="password" name="password" minlength="6" required><br>
-<input type="submit" name="submit" value="Login">
+<div class="form-group">
+<label for="username">Numele utilizatorului</label>
+<input type="text" name="username" required class="form-control"><br>
+
+<label for="password">Parola</label>
+<input type="password" name="password" minlength="6" required class="form-control"><br>
+<input type="submit" name="submit" value="Login" class="btn btn-primary">
+</div>
 </form>
 
 </body>

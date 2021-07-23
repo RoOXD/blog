@@ -23,12 +23,22 @@ if (isset($_POST['submit'])&&decodeUserID($value)) {
 ?>
 <html>
 <body>
-<p>Creati o postare.</p>
-<form action="admin.php" method="post">
-Titlu: <input type="text" name="title" required><br>
-Continut: <input type="text" name="body" required><br>
-<input type="submit" name="submit" value="Posteaza">
-</form>
+<div class="container">
+<div class="blog-header">
+<h1 class="blog-title">Creati o postare</h1>
+</div>
+</div>
 
+<form action="admin.php" method="post">
+<div class="form-group">
+<label for="title">Titlu</label>
+<input type="text" name="title" required class="form-control"><br>
+
+<label for="title">Continut</label>
+<textarea name="body" required class="form-control" rows="3"></textarea><br>
+
+<input type="submit" name="submit" value="Posteaza" class="btn btn-primary">
+</div>
+</form>
 </body>
 </html>

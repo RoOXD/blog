@@ -19,11 +19,20 @@ if (isset($_POST['submit'])) {
 ?>
 <html>
 <body>
-<p>Formular inregistrare.Introduceti datele.</p>
+
+<div class="container">
+<div class="blog-header">
+<h1 class="blog-title">Formular inregistrare.Introduceti datele.</h1>
+</div>
+</div>
+
 <form action="register.php" method="post">
-Nume utilizator: <input type="text" name="username" required><br>
-Parola: <input type="password" name="password" minlength="6" required><br>
-<input type="submit" name="submit" value="Inregistrare">
+<div class="form-group">
+<label for="username">Nume utilizator</label>
+<input type="text" name="username" required class="form-control"><br>
+<label for="username">Parola</label>
+<input type="password" name="password" minlength="6" required class="form-control"><br>
+<input type="submit" name="submit" value="Inregistrare" class="btn btn-primary">
 </form>
 
 </body>
