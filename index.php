@@ -186,7 +186,7 @@
 <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="admin.php">Posteaza</a>
+          <a class="blog-nav-item" href="admin.php">Posteaza</a>
           <a class="blog-nav-item" href="logout.php">Logout</a>
       </div>
 </div>
@@ -198,7 +198,7 @@
     <div class="blog-masthead">
         <div class="container">
             <nav class="blog-nav">
-            <a class="blog-nav-item active" href="login.php">Login</a>
+            <a class="blog-nav-item" href="login.php">Login</a>
             <a class="blog-nav-item" href="register.php">Register</a>
         </div>
     </div>
